@@ -1,0 +1,518 @@
+.wrapper{
+	min-height: 100%;
+	position: relative;
+	overflow: hidden;
+}
+.page {
+	min-height: 100%;
+}
+.page__inner-environment{
+	background: linear-gradient(to bottom, #9be2fe 0%,#67d1fb 100%);
+	/* background: linear-gradient(to top, #283E51, #0A2342); */
+	position: relative;
+	margin: 0 auto;
+	width: 1920px;
+	min-height: 947px;
+}
+.car {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 700px;
+	height: 200px;
+}
+.car {
+	width: 700px;
+	height: 200px;
+	position: absolute;
+	top: 65%;
+	left: 70%;
+	transform: translate(-50%, -50%);
+	z-index: 50;
+}
+.car__shadow {
+	content: "";
+	background-color: rgba(0, 0, 0, 0.8);
+	width: 100%;
+	height: 100px;
+	position: absolute;
+	bottom: -45px;
+	left: 0;
+	border-radius: 50%;
+	z-index: 1;
+	filter: blur(10px);
+}
+.car__body{
+	position: relative;
+	min-height: 100%;
+	background: url('../img/details-car/car-body.png') 50% 50% / cover no-repeat;
+	z-index: 10;
+}
+.car__wheel {
+	position: absolute;
+	background: url('../img/details-car/wheel.png') 50% 0 / contain no-repeat;
+	width: 100px;
+	height: 100px;
+	z-index: 11;
+}
+.car__wheel--left {
+	bottom: -14px;
+	left: 55px;
+	transform: rotate(83deg);
+}
+.car__wheel--right {
+	bottom: -7px;
+	right: 109px;
+}
+.car__rear-1{
+	position: absolute;
+	top: 75px;
+	left: 43px;
+	background: #000;
+	width: 128px;
+	height: 98px;
+	border-radius: 100% 0% 100% 0% / 67% 100% 0% 33%;
+}
+.car__rear-2{
+	position: absolute;
+   top: 66px;
+   right: 97px;
+   background: #000;
+   width: 132px;
+   height: 101px;
+   border-radius: 34% 66% 100% 0% / 0% 100% 0% 100%;
+   transform: rotate(-6deg);
+}
+.car__headlights{
+	background: rgb(0, 0, 0);
+   width: 25px;
+   height: 25px;
+   position: absolute;
+   top: 91px;
+   left: 6%;
+   z-index: 10;
+   border-radius: 89% 11% 97% 3% / 80% 21% 79% 20%;
+   transform: rotate(14deg);
+}	
+.headlights__basis{
+	width: 15px;
+	height: 15px;
+	background: #fff;
+	border-radius: 89% 11% 97% 3% / 80% 21% 79% 20%;
+	position: absolute;
+	top: 5px;
+	left: 5px;
+}
+.headlights__light{
+	width: 15px;
+   height: 11px;
+   position: absolute;
+   background-color: yellow;
+   border-radius: 50%;
+   top: 6px;
+   left: 1px;
+	filter: blur(7px);
+	visibility: hidden;
+	opacity: 0;
+}
+.car__body:hover ~ .car__headlights .headlights__light,
+.car__body:hover ~ .car__headlights .headlights__mirror{
+	visibility: visible;
+	opacity: 1;
+	transition: .5s;
+}
+.headlights__mirror{
+	width: 400px;
+	height: 200px;
+	position: absolute;
+	background-color: yellow;
+	border-radius: 89% 11% 88% 12% / 80% 42% 58% 20%;
+	top: 52px;
+	left: -438px;
+	filter: blur(60px);
+	visibility: hidden;
+	opacity: 0;
+} 
+.road{
+	perspective: 620px;
+	perspective-origin: center;
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	left: -150px;
+	z-index: 10		;
+}
+.road__surface{
+	transform: rotateX(27deg);
+	width: 120%;
+	position: relative;
+	height: 450px;
+	background-color: grey;
+}
+.road__mark {
+	position: absolute;
+	top: 50%;
+	width: 200px;
+	height: 20px;
+	background-color: #fff;
+	border-radius: 4px;
+}
+.road__mark--1 {
+	width: 200px;
+	left: 0;
+}
+.road__mark--2 {
+	left: 20%;
+}
+.road__mark--3 {
+	left: 40%;
+}
+.road__mark--4 {
+	left: 60%;
+}
+.road__mark--5 {
+	left: 80%;
+}
+.road__mark--6{
+	left: 98%;
+}
+.ground {
+	position: absolute;
+	top: 56%;
+	left: 0;
+	width: 100%;
+	background-color: rgb(112, 33, 33);
+	height: 20px;
+	z-index: 2;
+}
+.ground__el-1 {
+	background-color: #6E260E;
+	position: absolute;
+	width: 100%;
+	height: 10px;
+	top: 0;
+	left: 0;
+}
+.ground__el-2 {
+	background-color: #B87333;
+	position: absolute;
+	width: 100%;
+	height: 10px;
+	top: 50%;
+	left: 0;
+}
+.grass-mountain {
+	position: absolute;
+	height: 200px;
+	top: 35%;
+	width: 100%;
+}
+.grass-element {
+	position: absolute;
+	
+}
+.grass-element--1 {
+	z-index: 2;
+	background: #16b566;
+	top: 0;
+	left: 0;
+	width: 50%;
+	height: 100%;
+	border-radius: 1% 692px 0% 0% / 1% 92% 0% 0%;
+}
+.grass-element--2 {
+	z-index: 2;
+	background: #16b566;
+	top: 0;
+	right: 0;
+	width: 50%;
+	height: 100%;
+	border-radius: 1% 692px 0% 0% / 1% 92% 0% 0%;
+	transform: rotateY(180deg);
+}
+.grass-element--3 {
+	background: #25e485;
+	width: 300px;
+	height: 100px;
+	border-radius: 50%;
+	left: 50%;
+	top: 100px;
+	transform: translate(-50%, 0);
+}
+.sun{
+	position: absolute;
+	background-color: yellow;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	filter: blur(13px);
+	top: 50px;
+	left: 50%;
+	
+	transition: 5s;
+}
+
+.sun__light{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100px;
+	height: 100px;
+	border: 30px solid rgb(255, 255, 0);
+	border-radius: 50%;
+	
+}
+.car__body:hover ~ .car__wheel{
+	transform: rotate(-7220deg);
+	transition: 15s;
+}
+.clouds {
+	transition: 3s;
+	width: 400px;
+	height: 200px;
+	position: absolute;
+	top: 100px;
+	left: 70px;
+	transform: translate(0, 0);
+	z-index: 2;
+}
+.clouds__basis {
+	position: relative;
+	min-height: 100%;
+}
+.clouds__cloud {
+	position: absolute;
+}
+.clouds__cloud-element--1 {
+	width: 100%;
+	height: 115px;
+	background-color: #fff;
+	border-radius: 65px;
+	bottom: 0;
+	z-index: 1;
+}
+.clouds__cloud-element--2 {
+	top: 30px;
+	left: 55px;
+	width: 130px;
+	height: 130px;
+	background-color: #fff;
+	border-radius: 50%;
+}
+.clouds__cloud-element--3 {
+	width: 200px;
+	height: 200px;
+	background-color: #fff;
+	border-radius: 50%;
+	top: 0;
+	left: 162px;
+}
+/* .clouds-2 {
+	z-index: 2;
+	transition: 3s;
+	width: 400px;
+	height: 200px;
+	position: absolute;
+	top: 100px;
+	right: 70px;
+	transform: rotateY(180deg) scale(0.5);
+} */
+.clouds-second {
+	z-index: 2;
+	transition: 3s;
+	width: 400px;
+	height: 200px;
+	position: absolute;
+	top: 100px;
+	right: 70px;
+	transform: rotateY(180deg) scale(0.5);
+}
+.clouds-second__basis {
+	position: relative;
+	min-height: 100%;
+}
+.clouds-second__cloud {
+	position: absolute;
+}
+.clouds-second__cloud-element--1 {
+	width: 100%;
+	height: 115px;
+	background-color: #fff;
+	border-radius: 65px;
+	bottom: 0;
+	z-index: 1;
+}
+.clouds-second__cloud-element--2 {
+	top: 30px;
+	left: 55px;
+	width: 130px;
+	height: 130px;
+	background-color: #fff;
+	border-radius: 50%;
+}
+.clouds-second__cloud-element--3 {
+	width: 200px;
+	height: 200px;
+	background-color: #fff;
+	border-radius: 50%;
+	top: 0;
+	left: 162px;
+}
+.moon{
+	position: absolute;
+	top: 350px;
+	left: 20px;
+	width: 100px;
+	height: 100px;
+	box-shadow:25px 10px 0 0 blue;
+	border-radius:50%;
+	background-color:transparent;
+	transition: 5s;
+	z-index: 1;
+}
+.car:hover ~ .clouds{
+	transform: translate(1000px, 0px) scale(0.6);
+}
+.car:hover ~ .clouds-second{
+	transform: rotateY(180deg) translate(1000px, 0);
+}
+.car:hover ~ .sun{
+	transform: translate(1000px, 0);
+}
+.car:hover ~ .moon{
+	transform: translate(1000px, -300px);
+}
+/* ----------------------------------------------- */
+.blocks {
+	max-width: 1000px;
+	margin: 0 auto;
+	text-align: center;
+	padding-top: 20px;
+	background: #333;
+	padding-left: 30px;
+	padding-bottom: 30px;
+
+}
+.blocks__parent-item:not(:last-child){
+	margin-bottom: 20px;
+}
+.blocks__item {
+	padding: 20px;
+	font-family: Arial;
+	font-weight: 500;
+	font-size: 20px;
+	width: 150px;
+	height: 150px;
+}
+.blocks__parent-item{
+	background-color: #e3e3e3;
+	height: 150px;
+	width: 150px;
+}
+.blocks__parent-item:nth-child(1){
+	overflow: hidden;
+}
+.blocks__parent-item:nth-child(1):hover .blocks__item--red{
+	transform: translate(0,0);
+}
+.blocks__item--red {
+	transform: translate(100%, 0);
+	background: #b51616;
+	transition: .9s;
+}
+.blocks__parent-item:nth-child(2):hover .blocks__item--green {
+	transform: rotate(-45deg);
+}
+.blocks__item--green {
+	background: rgb(42, 165, 58);
+	transform-origin: 0 0;
+	transition: .7s;
+}
+.blocks__parent-item:nth-child(3):hover .blocks__item--blue {
+	transform: skew(10deg, 10deg);
+}
+.blocks__item--blue {
+	background: #168db5;
+	transition: .5s;
+}
+.blocks__item--yellow {
+	background: yellow;
+	transform: scale(1.2) skew(30deg) rotate(30deg) translate(100%, -100%);
+	pointer-events: none;
+	transition: .5s;
+}
+.blocks__parent-item:nth-child(4):hover .blocks__item--yellow{
+	transform: translate(0,0);
+}
+.blocks__parent-item:nth-child(5){
+	perspective: 150px;
+	perspective-origin: center;
+}
+.blocks__item--lemon{
+	background-color: lime;
+	transform: rotateY(-30deg);	
+}
+.blocks__item--pink{
+	background-color: rgb(236, 64, 93);
+	transition: 1.6s;
+}
+.blocks__item--pink:hover{
+	transform: rotateX(360deg);
+}
+.blocks__parent-item:nth-child(7){
+	perspective: 150px;
+	perspective-origin: center;
+}
+.blocks__parent-item:nth-child(7):hover .blocks__item--purple{
+	transform: translate3d(0, 0, 0);
+}
+.blocks__item--purple{
+	background-color: rgb(117, 10, 117);
+	transform: translate3d(120%, -30px, 0px) scale3d(1, 1, 1) rotate3d(1, 6, 17, 22deg);
+	transition: .7s;
+}
+.blocks__parent-item:nth-child(8){
+	perspective: 300px;
+	transform-style: preserve-3d;
+	background-color: #e3e3e37a;
+}
+.blocks__item--aqua{
+	background-color: aqua;
+	transition: 0.8s;
+}
+.blocks__item--aqua:hover{
+	transform: rotateX(50deg);
+}
+.blocks__parent-body {
+	position: relative;
+	width: 150px;
+	height: 150px;
+	transition: all 0.8s ease 0s;
+	transform-style: preserve-3d;
+}
+.blocks__item--1,
+.blocks__item--2 {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.blocks__item--1 {
+	z-index: 2;
+	transform: rotateY(0deg);
+	background: #168db5;
+	backface-visibility: hidden;
+}
+.blocks__item--2 {
+	transform: rotateY(-180deg);
+	background: #16b566;
+}
+.blocks__parent-item:nth-child(9):hover .blocks__parent-body {
+	transform: rotateY(-180deg);
+}
+/* ----------------------------------------------- */
